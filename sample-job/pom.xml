@@ -2,14 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>synapse-quartz</artifactId>
-        <groupId>org.synapse</groupId>
-        <version>1.0.0-SNAPSHOT</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <groupId>org.synapse</groupId>
     <artifactId>sample-job</artifactId>
+    <properties>
+        <synapse-quartz.version>1.0.0-SNAPSHOT</synapse-quartz.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>mysql</groupId>
@@ -19,7 +17,7 @@
         <dependency>
             <groupId>org.synapse</groupId>
             <artifactId>core-job</artifactId>
-            <version>${project.version}</version>
+            <version>${synapse-quartz.version}</version>
         </dependency>
     </dependencies>
 

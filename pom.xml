@@ -13,7 +13,6 @@
     <artifactId>synapse-quartz</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>admin</module>
         <module>core-job</module>
         <module>sample-job</module>
     </modules>

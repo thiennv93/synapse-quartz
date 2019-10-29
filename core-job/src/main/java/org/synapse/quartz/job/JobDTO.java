@@ -14,11 +14,11 @@ import java.util.Map;
 @AllArgsConstructor
 public class JobDTO {
     @NotEmpty
-    private String group = "default";
+    private String clusterName = "default";
     @NotEmpty
     private String jobName;
     @NotNull
     private String jobClass;
 
-    private Map<String, Object> dataMap;
+    private Map<String, Object> dataMap = Map.of();
 }

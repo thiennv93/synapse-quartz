@@ -1,9 +1,6 @@
 spring:
   application:
     name: cluster-1
-  cloud:
-    zookeeper:
-      connect-string: 10.60.105.38:8352
   datasource:
     url : jdbc:mysql://10.60.105.37:8920/bccs3_thiennv15?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
     username : db_cluster
