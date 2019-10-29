@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: cluster-1
+  cloud:
+    zookeeper:
+      connect-string: 10.60.105.38:8352
+  datasource:
+    url : jdbc:mysql://10.60.105.37:8920/bccs3_thiennv15?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    username : db_cluster
+    password : bccs3_maria
+    driverClassName : com.mysql.jdbc.Driver
+  quartz:
+    job-store-type: jdbc
+    properties:
+      org.quartz.threadPool.threadCount: 5
+      org.quartz.scheduler.instanceName: spring-boot-quartz-demo
+      org.quartz.scheduler.instanceId: AUTO
+      org.quartz.jobStore.class: org.quartz.impl.jdbcjobstore.JobStoreTX
+      org.quartz.jobStore.driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+      org.quartz.jobStore.misfireThreshold: 60000
+      org.quartz.jobStore.tablePrefix: QRTZ_
+      org.quartz.jobStore.isClustered: true
+      org.quartz.jobStore.clusterCheckinInterval: 20000
+      org.quartz.scheduler.classLoadHelper.class: org.quartz.simpl.ThreadContextClassLoadHelper
+
+
+org:
+  quartz:
+    jobStore:
+      class: org.quartz.impl.jdbcjobstore.JobStoreTX
+      clusterCheckinInterval: 15000
+      driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+      isClustered: true
+      misfireThreshold: 60000
+      tablePrefix: QRTZ_
+      useProperties: false
+    scheduler:
+      clusterName: testCluster
+      instanceId: AUTO
+      instanceName: quartzScheduler
+      skipUpdateCheck: true
+    threadPool:
+      class: org.quartz.simpl.SimpleThreadPool
+      threadCount: 20
+      threadPriority: 5
+
+server:
+  port: 8081
