@@ -12,7 +12,7 @@ public class TestJobSynapseQuartz extends SynapseQuartzJob {
 	@Autowired
 	private TestService testService;
 	@Override
-	public void execute(JobExecutionContext context) {
+	public void executeInternal(JobExecutionContext context) {
 		log.info("Long running job executing....");
 		try {
 			testService.test();

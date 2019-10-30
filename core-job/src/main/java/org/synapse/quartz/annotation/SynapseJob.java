@@ -20,7 +20,7 @@ public @interface SynapseJob {
     String name() default "";
 
     /**
-     * User friendly description of job
+     * description of job
      */
     String description() default "";
 
