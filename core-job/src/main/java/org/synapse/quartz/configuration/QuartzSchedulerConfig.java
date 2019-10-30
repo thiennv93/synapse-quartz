@@ -1,4 +1,4 @@
-package org.synapse.quartz.config;
+package org.synapse.quartz.configuration;
 
 import org.springframework.context.annotation.Configuration;
 
