@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.quartz.*;
-import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
@@ -18,7 +17,7 @@ import java.util.Objects;
 public class JobRequest {
     private String clusterName;
     private String jobName;
-    private String clazz;
+    private String jobClass;
     private String jobDescription;
     private String triggerDescription;
     private TriggerType triggerType;
@@ -119,6 +118,6 @@ public class JobRequest {
     }
 
     public Class<? extends Job> getJobClass() {
-        return JobUtils.getJobForName(clazz);
+        return JobUtils.getJobForName(jobClass);
     }
 }
