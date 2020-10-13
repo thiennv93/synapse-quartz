@@ -67,7 +67,7 @@
         <jackson.version>2.9.8</jackson.version>
         <logback.version>1.2.3</logback.version>
         <!-- for test -->
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <mockito.version>2.23.4</mockito.version>
         <assertj-core.version>3.12.2</assertj-core.version>
 
